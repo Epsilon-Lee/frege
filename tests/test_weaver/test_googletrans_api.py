@@ -1,4 +1,4 @@
-from frege.weaver.googletrans import GoogleTransAPI
+from frege.weaver.googletrans_api import GoogleTransAPI
 
 api = GoogleTransAPI()
 src='zh-CN'
