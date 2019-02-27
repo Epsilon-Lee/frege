@@ -17,9 +17,9 @@ parser.add_argument("--save-to", type=str, required=True,
 # A Hierarchical Phrase-Based Model for Statistical Machine Translation
 # http://www.aclweb.org/anthology/P05-1033
 def main(args):
-    with open(args.save_to, 'w') as f_saveto:
-        with open(args.corpus, 'r') as f_corpus:
-            with open(args.align_file) as f_align:
+    with open(args.save_to, 'w', encoding='utf-8') as f_saveto:
+        with open(args.corpus, 'r', encoding='utf-8') as f_corpus:
+            with open(args.align_file, encoding='utf-8') as f_align:
                 # f_corpus, f_align should have equal line number
                 for line, align in zip(f_corpus, f_align):
                     e, f = line.strip().split("|||")
